@@ -37,6 +37,7 @@ export class TodoService {
   // actual data but it does mimic the response request.
   deleteTodo(todo:Todo):Observable<Todo> {
     const url = `${this.todosUrl}/${todo.id}`;
+    // A delete request to delete the todo from the server.
     return this.http.delete<Todo>(url, httpOptions);
   }
 
