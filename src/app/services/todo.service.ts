@@ -11,7 +11,9 @@ import { Todo } from '../models/Todo';
 // the HTTP request, the header that contains the content-type.
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    // In case the CORS error appears.
+    'Access-Control-Allow-Origin': 'https://jsonplaceholder.typicode.com/todos'
   })
 }
 
